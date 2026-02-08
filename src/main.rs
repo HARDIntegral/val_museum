@@ -1,21 +1,25 @@
 use actix_files::{Files, NamedFile};
-use actix_web::{get, App, HttpServer, Result};
+use actix_web::{web, App, HttpServer, Result};
 
-#[get("/")]
-async fn index() -> Result<NamedFile> {
+async fn fallback() -> Result<NamedFile> {
     Ok(NamedFile::open("./static/index.html")?)
 }
 
 #[actix_web::main]
 async fn main() -> std::io::Result<()> {
-    println!("Museum running at http://127.0.0.1:8080");
+    let port = std::env::var("PORT").unwrap_or_else(|_| "10000".to_string());
+    let bind_addr = format!("0.0.0.0:{}", port);
+
+    println!("Listening on http://{}", bind_addr);
 
     HttpServer::new(|| {
         App::new()
-            .service(index)
-            .service(Files::new("/static", "./static"))
+            // Serve your static site at root
+            .service(Files::new("/", "./static").index_file("index.html"))
+            // Anything else -> index.html (SPA-style fallback)
+            .default_service(web::get().to(fallback))
     })
-    .bind(("127.0.0.1", 8080))?
+    .bind(bind_addr)?
     .run()
     .await
 }

@@ -1,13 +1,13 @@
 const slides = [
-	{ src: "/static/images/01.jpg", title: "Exhibit I",   text: "Aww look at this cutie <3" },
-	{ src: "/static/images/02.jpg", title: "Exhibit II",  text: "Remember when we went to get khatti rolls before our movie cuddle time?" },
-	{ src: "/static/images/03.jpg", title: "Exhibit III", text: "The smile OMG you should really be a model" },
-	{ src: "/static/images/04.jpg", title: "Exhibit IV",  text: "Ooooo remember when we went out for our Rook&Pawn date?" },
-	{ src: "/static/images/05.jpg", title: "Exhibit V",   text: "This picture will forever be cute" },
-	{ src: "/static/images/06.jpg", title: "Exhibit VI",  text: "My cutie graduated" },
-	{ src: "/static/images/07.jpg", title: "Exhibit VII", text: "Bad hair day hehehehe sassy <3" },
-	{ src: "/static/images/08.jpg", title: "Exhibit VIII",text: "I remember you being so happy and excited for this lunch date before the big game" },
-	{ src: "/static/images/09.jpg", title: "Exhibit IX",  text: "This is where it all began..." },
+	{ src: "/images/01.jpg", title: "Exhibit I",   text: "Aww look at this cutie <3" },
+	{ src: "/images/02.jpg", title: "Exhibit II",  text: "Remember when we went to get khatti rolls before our movie cuddle time?" },
+	{ src: "/images/03.jpg", title: "Exhibit III", text: "The smile OMG you should really be a model" },
+	{ src: "/images/04.jpg", title: "Exhibit IV",  text: "Ooooo remember when we went out for our Rook&Pawn date?" },
+	{ src: "/images/05.jpg", title: "Exhibit V",   text: "This picture will forever be cute" },
+	{ src: "/images/06.jpg", title: "Exhibit VI",  text: "My cutie graduated" },
+	{ src: "/images/07.jpg", title: "Exhibit VII", text: "Bad hair day hehehehe sassy <3" },
+	{ src: "/images/08.jpg", title: "Exhibit VIII",text: "I remember you being so happy and excited for this lunch date before the big game" },
+	{ src: "/images/09.jpg", title: "Exhibit IX",  text: "This is where it all began..." },
 ];
 
 const app = document.getElementById("app");
