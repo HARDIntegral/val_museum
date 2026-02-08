@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Art Museum 💛</title>
+	<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+	<!-- viewport clips everything so only ONE screen is visible -->
+	<div class="viewport">
+		<main class="app" id="app">
+			<!-- START -->
+			<section class="screen start" aria-label="Start screen">
+				<div class="center">
+					<h1 class="big">Take a scroll through the art museum shall we?</h1>
+					<button class="btn btn-next" id="startArrow" aria-label="Start">
+						Next →
+					</button>
+				</div>
+			</section>
+
+			<!-- GALLERY -->
+			<section class="screen gallery" aria-label="Gallery screen">
+				<div class="galleryWrap">
+					<div class="frame">
+						<div class="frame-wood">
+							<div class="frame-mat">
+								<div class="frame-art">
+									<img id="artImg" alt="Artwork">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="plaque">
+						<div class="plaqueTitle" id="capTitle">Exhibit I</div>
+						<div class="plaqueText" id="capText">A moment I like a lot.</div>
+					</div>
+
+					<div class="navRow">
+						<div class="counter" id="counter">1 / 1</div>
+						<button class="btn btn-next" id="nextArrow" aria-label="Next">
+							Next →
+						</button>
+					</div>
+				</div>
+			</section>
+
+			<!-- TRANSITION (in-between room) -->
+			<section class="screen transition" aria-label="Transition room">
+				<div class="center">
+					<h1 class="big" id="transitionTitle">Almost a year ago we went to an art museum... Just a bit better than this one</h1>
+					<p class="muted" id="transitionText">and I asked a pretty big question...</p>
+					<button class="btn btn-next" id="toFinalBtn" aria-label="Go to final room">
+						Continue →
+					</button>
+				</div>
+			</section>
+
+			<!-- ASK (final room) -->
+			<section class="screen ask" aria-label="Question screen">
+				<div class="center">
+					<h1 class="big">Will you be my Valentine?</h1>
+					<p class="muted">🥺💛</p>
+
+					<div class="askButtons" aria-label="Valentine buttons">
+						<button class="btn" id="yesBtn" aria-label="Yes">Yes</button>
+						<button class="btn" id="noBtn" aria-label="No">No</button>
+					</div>
+				</div>
+			</section>
+		</main>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+	<script src="/static/app.js"></script>
+</body>
+
+</html>
